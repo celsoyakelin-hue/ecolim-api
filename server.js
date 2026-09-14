@@ -363,12 +363,12 @@ app.delete("/residuos/:id", (req, res) => {
 // INICIAR SERVIDOR
 // ==========================================
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
 
     console.log(
-        `Servidor funcionando en http://localhost:${PORT}`
+        `Servidor funcionando en el puerto ${PORT}`
     );
 
 });
